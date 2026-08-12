@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qutil"
+version = "0.1.0"
+description = "A lightweight psutil-compatible process and system utilities library"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Qutil" }]
+keywords = ["psutil", "process", "system", "monitoring"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: System :: Monitoring",
+]
+
+[project.scripts]
+qutil = "qutil.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["qutil*"]
